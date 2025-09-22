@@ -28,7 +28,7 @@ function ThemeSwitcher(){
 
         return(
             <div style={style}>
-                <h2>{theme.toUpperCase()}MODE</h2>
+                <h4>{theme.toUpperCase()}MODE</h4>
                 <button onClick={toggleTheme}>
                     switch to {theme==='light'?'dark':'light'}Mode
                 </button>
