@@ -1,15 +1,31 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router,Routes,Route,Link,NavLink,useNavigate} from 'react-router-dom'
 import './App.css';
 import { ThemeProvider,ThemeSwitcher } from './components/theme';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import About from './components/About';
+
 
 
 function App() {
   return (
-    <div className="App">
-     <ThemeProvider>
-      <ThemeSwitcher/>
-     </ThemeProvider>
-    </div>
+    <Router>
+      <div>
+        <nav style={{marginBottom:'20px'}}>
+          <Link to='/' style={{margin:'0 10px'}}>Home</Link>
+          <NavLink to='/about' style={({isActive})=>({margin:'0 10px', fontWeight:isActive?'bold':'normal'})}>About</NavLink>
+          <Link to='/Contact' style={{margin:'0 10px'}}>Contact</Link>
+        </nav>
+
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='about' element={<About/>}/>
+          <Route path='Contact' element={<Contact/>}/>
+        </Routes>
+
+      </div>
+    </Router>
+
   );
 }
 

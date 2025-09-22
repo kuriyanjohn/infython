@@ -22,7 +22,6 @@ function ThemeSwitcher(){
             minHeight: '100vh', 
             padding: "20px",
             textAlign: "center",
-            borderRadius: "10px",
             transition: "all 0.3s ease"
         }
 
