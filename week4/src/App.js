@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Routes,Route,Link,NavLink,useNavigate} from 'react-router-dom'
+import {BrowserRouter as Router,Routes,Route,Link,NavLink} from 'react-router-dom'
 import './App.css';
 import { ThemeProvider,ThemeSwitcher } from './components/theme';
 import Home from './components/Home';
